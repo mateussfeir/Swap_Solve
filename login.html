@@ -6,33 +6,47 @@
     <title>Login</title>
     <link rel="stylesheet" href="assets/css/login.css">
     <script src="https://kit.fontawesome.com/83fd8b6927.js" crossorigin="anonymous"></script>
+    <script src="assets/script/signup_function.js"></script>
 </head>
 <body>
     <div class="container"> 
         <div class="header"> 
-            <h2> Login</h2>
-
+            <img src="assets/img/crypto_logo.png" alt="logo">
+            <br>
         </div>
+
         <div class="main"> 
-            <form> 
+            <form id="loginForm"> <!-- Added id attribute -->
+                <h2> Login</h2>
                 <span> 
                     <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Username" name=""><br>
+                    <input type="text" placeholder="Username" id="Username"> <!-- Added id attribute -->
+                    <br>
                 </span>
                 <span>
                     <i class="fa-solid fa-lock"></i>
-                    <input type="text" placeholder="Password" name=""><br> 
+                    <input type="password" placeholder="Password" id="Password"> <!-- Added id attribute and changed input type to password -->
+                    <br> 
                 </span>
-                <button> Login</button>
-                <a href="signup.html"> I don't have any account yet.</a>
 
+                <button type="button" id="loginButton" onclick="login()">Login</button>
+                
+                <br>
+                <a href="signup.html"> I don't have any account yet.</a>
             </form>
 
+            <div id="welcomeMessage" style="display: none;">
+                <h2>Welcome <span id="displayUsername"></span>!</h2>
+                <p>Thank you for logging up. We're excited to have you on board. <br>
+                </p>
+                <button type="button" onclick="window.location.href = 'index.html'">Home</button>
+            </div>
+            </div>
+            <div class="footer">
+                <p id="copyright">Copyright &copy; 2024 by Mateus and Osilama.</p>
+            </div> 
         </div>
-         <div class="footer">
-            <p id="copyright">Copyright &copy; 2024 by Mateus and Osilama.</p>
-        </div> 
 
-    </div>
+    <script src="assets/script/signup_function.js"></script> <!-- Add the path to your JavaScript file -->
 </body>
 </html>
